@@ -3,11 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benyr</title>
-    <link rel="stylesheet" href="style.css">
+    <title>BJ Benyr</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+    <style>
+      :root {
+        --ground: #FAFAF8;
+        --surface: #EEECEA;
+        --text: #1C1E21;
+        --text-muted: #6E7178;
+        --accent: #2A7D6E;
+        --accent-hover: #1F6558;
+        --border: #DDD9D4;
+        --tag-bg: #E6E3DE;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --ground: #12161A;
+          --surface: #1A2028;
+          --text: #D5D3CE;
+          --text-muted: #898C92;
+          --accent: #3DA893;
+          --accent-hover: #4DBEA8;
+          --border: #282F38;
+          --tag-bg: #232A33;
+        }
+      }
+
+      :root[data-theme="dark"] {
+        --ground: #12161A;
+        --surface: #1A2028;
+        --text: #D5D3CE;
+        --text-muted: #898C92;
+        --accent: #3DA893;
+        --accent-hover: #4DBEA8;
+        --border: #282F38;
+        --tag-bg: #232A33;
+      }
+
+      body {
+        background: var(--ground);
+        color: var(--text);
+        font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 1.0625rem;
+        line-height: 1.65;
+        max-width: 680px;
+        margin: 0 auto;
+        padding-inline: 1.5rem;
+        padding-block: 4rem 3rem;
+      }
+
+      h1 {
+        font-family: 'Outfit', sans-serif;
+        font-weight: 700;
+        font-size: 2.25rem;
+        line-height: 1.15;
+        margin: 0 0 0.2rem;
+        text-wrap: balance;
+        color: var(--text);
+      }
+
+      .role {
+        font-family: 'Outfit', sans-serif;
+        font-weight: 600;
+        font-size: 1.125rem;
+        color: var(--accent);
+        margin: 0 0 1.75rem;
+      }
+
+      .intro {
+        margin: 0 0 2.5rem;
+      }
+
+      h2 {
+        font-family: 'Outfit', sans-serif;
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin: 2.5rem 0 1rem;
+        color: var(--text);
+        letter-spacing: 0.01em;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 0 0 0.5rem;
+        padding: 0;
+        list-style: none;
+      }
+
+      .tags li {
+        background: var(--tag-bg);
+        color: var(--text);
+        padding: 0.3rem 0.75rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .focus-list {
+        margin: 0 0 0.5rem;
+        padding: 0 0 0 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .focus-list li {
+        color: var(--text);
+      }
+
+      .ask {
+        margin: 0;
+      }
+
+      .links {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .links a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: color 0.15s;
+      }
+
+      .links a:hover {
+        color: var(--accent-hover);
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+        border-radius: 2px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * { transition: none !important; }
+      }
+    </style>
 </head>
 <body>
-    <h1>Benyr</h1>
-    <img src="Git-Icon-1788C.png" alt="A Git Logo for testing">
+    <h1>BJ Benyr</h1>
+    <p class="role">Senior Observability Engineer</p>
+
+    <p class="intro">I spend my days making sure teams can actually see what their systems are doing — synthetics, metrics, logs, traces, APM, profiling, RUM, the whole stack. Right now I'm deep into vendor-agnostic observability. OpenTelemetry and Grafana Alloy have my attention. I think the industry is finally moving past "pick one vendor and hope for the best," and I want to be part of building what comes next.</p>
+
+    <h2>What I work with</h2>
+    <ul class="tags">
+      <li>Grafana Cloud</li>
+      <li>Prometheus</li>
+      <li>Mimir</li>
+      <li>Alloy</li>
+      <li>OpenTelemetry</li>
+      <li>Splunk</li>
+      <li>k6</li>
+      <li>Synthetic Monitoring</li>
+      <li>ThousandEyes</li>
+      <li>LogicMonitor</li>
+    </ul>
+
+    <h2>What I'm into lately</h2>
+    <ul class="focus-list">
+      <li>Pushing vendor-agnostic collection pipelines with OTel and Alloy</li>
+      <li>Fleet management at scale — auditing collector versions, drift detection, that kind of thing</li>
+      <li>Dashboards-as-code and observability-as-code workflows</li>
+      <li>Figuring out where AI fits into observability operations</li>
+    </ul>
+
+    <h2>Ask me about</h2>
+    <p class="ask">Migrating off legacy monitoring platforms, synthetic monitoring at scale, or why your alerts are probably lying to you.</p>
+
+    <nav class="links">
+      <a href="https://github.com/bbenyr">GitHub</a>
+    </nav>
 </body>
 </html>
